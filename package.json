@@ -1,0 +1,15 @@
+{
+  "name": "pjt_asservice",
+  "version": "1.0.0",
+  "description": "2020-2 SKHU IT A/S Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "underscore": "^1.10.2"
+  }
+}
