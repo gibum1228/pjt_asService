@@ -1,9 +1,87 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <title>성공회대학교 as센터</title>
+
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            form {
+                border: 3px solid #f1f1f1;
+                width: 50%;
+                margin: 0 auto;
+                padding-bottom: 30px;
+            }
+
+            input[type=text], input[type=password] {
+                width: 100%;
+                height: 3em;
+                padding-left: 20px;
+                border: 1px solid #ccc;
+                border-radius: 50px;
+            }
+            input[type=text]:focus, input[type=password]:focus {
+                outline: none;
+                border-radius: 50px;
+                border: 3px solid black;
+            }
+
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 15px;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                width: 100%;
+            }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+            .cancelbtn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: #f44336;
+            }
+
+            .imgContainer {
+                text-align: center;
+                margin: 50px 0px;
+            }
+
+            .container {
+                margin: 15px auto;
+                width: 50%;
+            }
+        </style>
     </head>
     <body>
-        
+        <form action="">
+            <div class="imgContainer">
+              <img src="media/마크_성공회대학교.png" alt="Avatar" width="50%" height="50%">
+            </div>
+          
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="아이디" name="uname" required>
+            </div>
+            <div class="container">
+                <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="비밀번호" name="psw" required>
+            </div>
+            <div class="container">
+                <button type="submit">로그인</button>
+                <label style="float:right;">
+                    <input type="checkbox" checked="checked" name="remember"> 로그인 유지
+                  </label>
+            </div>
+          </form>
     </body>
 </html>
