@@ -17,8 +17,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("countDown").innerHTML = "<big>" + days + "일 " + hours + "시 "
-  + minutes + "분 " + seconds + "초 </big>";
+  document.getElementById("countDown").innerHTML = "<small>반납 가능 날짜까지</small><br>" + days + "일 " + hours + "시 "
+  + minutes + "분 " + seconds + "초";
 
   // If the count down is finished, write some text
   if (distance < 0) {
