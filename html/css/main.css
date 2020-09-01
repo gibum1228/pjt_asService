@@ -54,6 +54,9 @@ body {
     display: table;
     clear: both;
 }
+.quickBox {
+    padding: 10px 150px;
+}
 .quickBtn {
     box-sizing: border-box;
     float: left;
@@ -68,8 +71,8 @@ body {
     font-weight: bold;
 }
 .quickBtn img {
-    width: 70%;
-    height: 100%;
+    width: 40%;
+    height: 70%;
 }
 /*-----------------------------------------*/
 /* footer */
