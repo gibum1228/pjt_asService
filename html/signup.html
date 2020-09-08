@@ -9,30 +9,30 @@
     <script src="js/signup.js"></script>
 </head>
 <body>
-    <form method="POST" action="/signup_check">
+    <form method="POST" action="/login">
         <div class="imgContainer">
-          <img src="media/로고_신영복체.jpg" alt="mark" width="50%" height="50%">
+          <img src="media/로고_신영복체.jpg" alt="mark" width="50%" height="50%" onclick="window.open('login.html', '_self')">
         </div>
         <!--정보 입력-->
         <div class="container">
             <label for="usnum"><b>학번*</b></label>
-            <input type="text" placeholder="학번" name="userSNum" required>
+            <input type="text" placeholder="학번" name="userSNum" onchange="idSame()" autocomplete="off" required>
           </div>
           <div class="container">
             <label for="uname"><b>이름*</b></label>
-            <input type="text" placeholder="이름" name="userName" required>
+            <input type="text" placeholder="이름" name="userName" autocomplete="off" required>
           </div>
         <div class="container">
             <label for="upsw"><b>비밀번호*</b></label>
-          <input type="password" placeholder="비밀번호" name="userPsw" onchange="pswSame()" required>
+          <input type="password" placeholder="비밀번호" name="userPsw" onchange="pswSame()" autocomplete="off" required>
         </div>
         <div class="container">
             <label for="cpsw"><b>비밀번호 확인*</b></label>
-          <input type="password" placeholder="비밀번호 재입력" name="checkPsw" onchange="pswSame()" required>
+          <input type="password" placeholder="비밀번호 재입력" name="checkPsw" onchange="pswSame()" autocomplete="off" required>
         </div>
         <div class="container">
             <label for="uemail"><b>이메일*</b></label>
-          <input type="email" placeholder="이메일" name="userEmail" required>
+          <input type="email" placeholder="이메일" name="userEmail" autocomplete="off" required>
         </div>
         <div class="container">
             <table style="margin: 0 auto;">
@@ -75,7 +75,9 @@
         </div>
         <!--정보 전송-->
         <div class="container">
-            <button type="submit">회원 가입</button>
+            <div id="clickBtn" onclick="signUpOk()">
+                <button type="submit" id="upBtn">회원 가입</button>    
+            </div>
         </div>
       </form>
 </body>
