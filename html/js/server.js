@@ -4,7 +4,7 @@ const app = express();
 const path = require('path');
 const router = express.Router();
 // js 파일 실행 위치를 기준으로 하기 때문에 D:\pjt_asService\html를 기준으로 변경
-var str = __dirname.substring(0, 2) + '/pjt_asservice/html'; 
+var str = __dirname.replace("/js", ""); // .substring(0, 2) + '/pjt_asservice/html'; 
 // post 방식으로 form 데이터를 받기 위함
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
@@ -25,7 +25,7 @@ router.get('/signup', (req, res) => {
     res.sendFile(path.join(str + '/signup.html'));
 });
 // 회원 가입 확인창
-app.post('/signup_check', (req, res) => {
+app.post('/signUp_Ok', (req, res) => {
     var snum = req.body.userSNum;
     var name = req.body.userName;
     var psw = req.body.userPsw;
