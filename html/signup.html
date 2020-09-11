@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 가입</title>
+    <link rel="stylesheet" href="css/boxs.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/signup.js"></script>
+</head>
+<body>
+    <form method="POST" action="/signUp_Ok">
+        <div class="imgContainer">
+          <img src="media/로고_신영복체.jpg" alt="mark" width="50%" height="50%" onclick="window.open('login.html', '_self')">
+        </div>
+        <!--정보 입력-->
+        <div class="container">
+            <label for="usnum"><b>학번*</b></label>
+            <input type="text" placeholder="학번" name="userSNum" onchange="idSame()" autocomplete="off" required>
+          </div>
+          <div class="container">
+            <label for="uname"><b>이름*</b></label>
+            <input type="text" placeholder="이름" name="userName" autocomplete="off" required>
+          </div>
+        <div class="container">
+            <label for="upsw"><b>비밀번호*</b></label>
+          <input type="password" placeholder="비밀번호" name="userPsw" onchange="pswSame()" autocomplete="off" required>
+        </div>
+        <div class="container">
+            <label for="cpsw"><b>비밀번호 확인*</b></label>
+          <input type="password" placeholder="비밀번호 재입력" name="checkPsw" onchange="pswSame()" autocomplete="off" required>
+        </div>
+        <div class="container">
+            <label for="uemail"><b>이메일*</b></label>
+          <input type="email" placeholder="이메일" name="userEmail" autocomplete="off" required>
+        </div>
+        <div class="container">
+            <table style="margin: 0 auto;">
+                <thead>
+                    <tr>
+                        <td colspan="6">
+                            <label for="ugrade"><b>학년*</b></label>
+                        </td>
+                        <td>
+                            <label for="umajor"><b>전공*</b></label>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="userGrade" id="selectBox">
+                                <option value="1">1학년</option>
+                                <option value="2">2학년</option>
+                                <option value="3">3학년</option>
+                                <option value="4">4학년</option>
+                            </select>
+                        </td>
+                        <td></td><td></td><td></td><td></td><td></td>
+                        <td>
+                            <select name="userMajor" id="selectBox">
+                                <option value="IT융합자율학부">IT융합자율학부</option>
+                                <option value="컴퓨터공학과">컴퓨터공학전공</option>
+                                <option value="소프트웨어공학전공">소프트웨어공학전공</option>
+                                <option value="정보통신공학전공">정보통신공학전공</option>
+                                <option value="글로컬IT전공">글로컬IT전공</option>
+                            </select>
+                        </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--정보 전송-->
+        <div class="container">
+            <div>
+                <button type="submit" id="upBtn">회원 가입</button>    
+            </div>
+        </div>
+      </form>
+</body>
+</html>
